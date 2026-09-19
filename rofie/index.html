@@ -1,286 +1,143 @@
-@@ -1 +1,285 @@
-/* Reset Basic */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HPStore - Jual Beli HP</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif}
+body{color:#333;line-height:1.6;background:#f8f9fa}
+.container{max-width:1100px;margin:auto;padding:0 20px}
+.navbar{background:#fff;box-shadow:0 2px 10px #0000001a;position:sticky;top:0;z-index:1000}
+.nav-container{display:flex;justify-content:space-between;align-items:center;height:70px}
+.logo{font-size:24px;font-weight:800;color:#1a1a1a;text-decoration:none}.logo span{color:#25d366}
+.nav-links{display:flex;list-style:none}.nav-links li a{text-decoration:none;color:#555;margin-left:20px;font-weight:600}
+.nav-links li a:hover{color:#25d366}
+.hero{background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);color:#fff;padding:85px 0;text-align:center}
+.hero h1{font-size:42px;margin-bottom:18px}.hero p{font-size:18px;max-width:650px;margin:0 auto 28px;color:#ddd}
+.hero-buttons{display:flex;justify-content:center;gap:15px;flex-wrap:wrap}
+.btn{display:inline-block;padding:12px 25px;border-radius:25px;text-decoration:none;font-weight:bold;transition:.3s}
+.btn-primary{background:#007bff;color:#fff}.btn-primary:hover{background:#0056b3}
+.btn-secondary,.btn-whatsapp{background:#25d366;color:#fff}.btn-secondary:hover,.btn-whatsapp:hover{background:#1eb954}
+.section-title{text-align:center;font-size:30px;margin-bottom:40px}
+.services{padding:70px 0;background:#fff}.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:25px}
+.service-card{text-align:center;padding:28px;border-radius:10px;background:#f8f9fa;border:1px solid #eee}
+.service-card .icon{font-size:38px;color:#25d366;margin-bottom:12px}.service-card h3{margin-bottom:8px}
+.products{padding:70px 0}.product-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:25px}
+.product-card{background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 4px 15px #0000000d;position:relative}
+.product-badge{position:absolute;top:15px;left:15px;background:#25d366;color:#fff;padding:5px 12px;border-radius:15px;font-size:12px;font-weight:bold;z-index:1}
+.product-card img{width:100%;height:240px;object-fit:cover}.product-info{padding:20px}
+.product-info h3{font-size:19px;margin-bottom:7px}.price{font-size:18px;color:#e63946;font-weight:bold}
+.unit{font-size:13px;color:#777;font-weight:normal}.desc{font-size:14px;color:#666;margin:8px 0}
+.btn-sm{display:block;text-align:center;background:#1a1a1a;color:#fff;padding:10px;border-radius:6px;margin-top:15px;text-decoration:none;font-weight:bold}
+.btn-sm:hover{background:#25d366}
+.cta{background:#1a1a1a;color:#fff;text-align:center;padding:55px 0}.cta h2{font-size:30px;margin-bottom:10px}.cta p{color:#ccc;margin-bottom:22px}
+.btn-whatsapp{font-size:17px;padding:14px 28px}
+footer{background:#111;color:#777;text-align:center;padding:20px;font-size:14px}footer strong{color:#fff}
+@media(max-width:768px){.nav-container{flex-direction:column;height:auto;padding:12px 0;gap:8px}.nav-links li a{margin-left:9px;font-size:13px}.hero h1{font-size:30px}.hero{padding:65px 0}.hero-buttons{flex-direction:column;align-items:center}.btn{width:230px}}
+</style>
+</head>
+<body>
 
-body {
-    color: #333;
-    line-height: 1.6;
-    background-color: #f8f9fa;
-}
+<header class="navbar">
+  <div class="container nav-container">
+    <a href="#beranda" class="logo">HP<span>Store</span></a>
+    <ul class="nav-links">
+      <li><a href="#beranda">Beranda</a></li>
+      <li><a href="#layanan">Layanan</a></li>
+      <li><a href="#produk">Koleksi HP</a></li>
+      <li><a href="#kontak">Kontak</a></li>
+    </ul>
+  </div>
+</header>
 
-.container {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
+<section class="hero" id="beranda">
+  <div class="container">
+    <h1>Jual Beli HP<br>Mudah, Aman & Terpercaya</h1>
+    <p>Temukan berbagai smartphone pilihan dengan harga menarik. Hubungi kami langsung untuk pemesanan dan informasi stok.</p>
+    <div class="hero-buttons">
+      <a href="#produk" class="btn btn-primary">Lihat Koleksi HP</a>
+      <a href="https://wa.me/6281234567890?text=Halo%20HPStore%2C%20saya%20ingin%20bertanya%20tentang%20HP" class="btn btn-secondary">Chat WhatsApp</a>
+    </div>
+  </div>
+</section>
 
-/* Navbar */
-.navbar {
-    background: #ffffff;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
+<section class="services" id="layanan">
+  <div class="container">
+    <h2 class="section-title">Layanan Kami</h2>
+    <div class="services-grid">
+      <div class="service-card"><div class="icon">📱</div><h3>HP Berkualitas</h3><p>Produk pilihan dengan informasi spesifikasi yang jelas.</p></div>
+      <div class="service-card"><div class="icon">💰</div><h3>Harga Menarik</h3><p>Dapatkan penawaran terbaik untuk berbagai pilihan HP.</p></div>
+      <div class="service-card"><div class="icon">🚚</div><h3>Pengiriman</h3><p>Pesanan diproses dan dikirim sesuai kesepakatan.</p></div>
+      <div class="service-card"><div class="icon">💬</div><h3>Customer Support</h3><p>Konsultasikan kebutuhan HP Anda melalui WhatsApp.</p></div>
+    </div>
+  </div>
+</section>
 
-.nav-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 70px;
-}
+<section class="products" id="produk">
+  <div class="container">
+    <h2 class="section-title">Koleksi HP</h2>
+    <div class="product-grid">
 
-.logo {
-    font-size: 24px;
-    font-weight: 800;
-    color: #1a1a1a;
-    text-decoration: none;
-}
+      <div class="product-card">
+        <span class="product-badge">Terlaris</span>
+        <img src="https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?auto=format&fit=crop&w=800&q=80" alt="Smartphone Pro">
+        <div class="product-info">
+          <h3>Smartphone Pro Max</h3>
+          <p class="price">Rp 8.999.000 <span class="unit">/ unit</span></p>
+          <p class="desc">Layar premium, kamera berkualitas, dan performa cepat.</p>
+          <a class="btn-sm" href="https://wa.me/6281234567890?text=Saya%20ingin%20membeli%20Smartphone%20Pro%20Max">Beli Sekarang</a>
+        </div>
+      </div>
 
-.logo span {
-    color: #25d366;
-}
+      <div class="product-card">
+        <span class="product-badge">Best Seller</span>
+        <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=800&q=80" alt="Smartphone">
+        <div class="product-info">
+          <h3>Smartphone Ultra</h3>
+          <p class="price">Rp 6.499.000 <span class="unit">/ unit</span></p>
+          <p class="desc">Desain modern dengan kamera dan performa untuk aktivitas harian.</p>
+          <a class="btn-sm" href="https://wa.me/6281234567890?text=Saya%20ingin%20membeli%20Smartphone%20Ultra">Beli Sekarang</a>
+        </div>
+      </div>
 
-.nav-links {
-    display: flex;
-    list-style: none;
-}
+      <div class="product-card">
+        <span class="product-badge">Promo</span>
+        <img src="https://images.unsplash.com/photo-1598327105666-5b89351aff97?auto=format&fit=crop&w=800&q=80" alt="Smartphone">
+        <div class="product-info">
+          <h3>Smartphone Series A</h3>
+          <p class="price">Rp 3.499.000 <span class="unit">/ unit</span></p>
+          <p class="desc">Pilihan ekonomis dengan fitur lengkap untuk kebutuhan sehari-hari.</p>
+          <a class="btn-sm" href="https://wa.me/6281234567890?text=Saya%20ingin%20membeli%20Smartphone%20Series%20A">Beli Sekarang</a>
+        </div>
+      </div>
 
-.nav-links li a {
-    text-decoration: none;
-    color: #555;
-    margin-left: 20px;
-    font-weight: 600;
-    transition: 0.3s;
-}
+      <div class="product-card">
+        <span class="product-badge">Baru</span>
+        <img src="https://images.unsplash.com/photo-1580910051074-3eb694886505?auto=format&fit=crop&w=800&q=80" alt="Smartphone">
+        <div class="product-info">
+          <h3>Smartphone Note</h3>
+          <p class="price">Rp 4.999.000 <span class="unit">/ unit</span></p>
+          <p class="desc">Layar luas, baterai tahan lama, dan nyaman untuk bekerja maupun hiburan.</p>
+          <a class="btn-sm" href="https://wa.me/6281234567890?text=Saya%20ingin%20membeli%20Smartphone%20Note">Beli Sekarang</a>
+        </div>
+      </div>
 
-.nav-links li a:hover {
-    color: #25d366;
-}
+    </div>
+  </div>
+</section>
 
-/* Hero Section */
-.hero {
-    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-    color: #fff;
-    padding: 100px 0;
-    text-align: center;
-}
+<section class="cta" id="kontak">
+  <div class="container">
+    <h2>Ingin Membeli HP?</h2>
+    <p>Hubungi kami untuk cek stok, harga, dan proses pemesanan.</p>
+    <a href="https://wa.me/6281234567890?text=Halo%20HPStore%2C%20saya%20ingin%20cek%20stok%20HP" class="btn btn-whatsapp">💬 Chat Sekarang via WhatsApp</a>
+  </div>
+</section>
 
-.hero h1 {
-    font-size: 40px;
-    margin-bottom: 20px;
-}
+<footer>
+  © 2026 <strong>HPStore</strong>. Semua Hak Dilindungi.
+</footer>
 
-.hero p {
-    font-size: 18px;
-    max-width: 600px;
-    margin: 0 auto 30px;
-    color: #ddd;
-}
-
-.hero-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-}
-
-/* Buttons */
-.btn {
-    display: inline-block;
-    padding: 12px 25px;
-    border-radius: 25px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-.btn-primary {
-    background: #007bff;
-    color: #fff;
-}
-
-.btn-primary:hover {
-    background: #0056b3;
-}
-
-.btn-secondary {
-    background: #25d366;
-    color: #fff;
-}
-
-.btn-secondary:hover {
-    background: #1eb954;
-}
-
-.btn-whatsapp {
-    background: #25d366;
-    color: #fff;
-    font-size: 18px;
-    padding: 15px 30px;
-}
-
-.btn-whatsapp:hover {
-    background: #1eb954;
-}
-
-.btn-sm {
-    display: block;
-    text-align: center;
-    background: #1a1a1a;
-    color: #fff;
-    padding: 10px;
-    border-radius: 5px;
-    margin-top: 15px;
-}
-
-.btn-sm:hover {
-    background: #25d366;
-}
-
-/* Section Common */
-.section-title {
-    text-align: center;
-    font-size: 30px;
-    margin-bottom: 40px;
-}
-
-/* Services */
-.services {
-    padding: 80px 0;
-    background: #fff;
-}
-
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-}
-
-.service-card {
-    text-align: center;
-    padding: 30px;
-    border-radius: 10px;
-    background: #f8f9fa;
-    border: 1px solid #eee;
-}
-
-.service-card i {
-    font-size: 40px;
-    color: #25d366;
-    margin-bottom: 15px;
-}
-
-.service-card h3 {
-    margin-bottom: 10px;
-}
-
-/* Products */
-.products {
-    padding: 80px 0;
-}
-
-.product-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-}
-
-.product-card {
-    background: #fff;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-    position: relative;
-}
-
-.product-badge {
-    position: absolute;
-    top: 15px;
-    left: 15px;
-    background: #25d366;
-    color: #fff;
-    padding: 5px 12px;
-    border-radius: 15px;
-    font-size: 12px;
-    font-weight: bold;
-}
-
-.product-card img {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-}
-
-.product-info {
-    padding: 20px;
-}
-
-.product-info h3 {
-    font-size: 20px;
-    margin-bottom: 8px;
-}
-
-.product-info .price {
-    font-size: 18px;
-    color: #e63946;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-.product-info .desc {
-    font-size: 14px;
-    color: #666;
-}
-
-/* CTA Section */
-.cta {
-    background: #1a1a1a;
-    color: #fff;
-    text-align: center;
-    padding: 60px 0;
-}
-
-.cta h2 {
-    font-size: 32px;
-    margin-bottom: 15px;
-}
-
-.cta p {
-    color: #ccc;
-    margin-bottom: 25px;
-}
-
-/* Footer */
-footer {
-    background: #111;
-    color: #777;
-    text-align: center;
-    padding: 20px 0;
-    font-size: 14px;
-}
-
-footer strong {
-    color: #fff;
-}
-
-/* Responsive Styling */
-@media (max-width: 768px) {
-    .nav-container {
-        flex-direction: column;
-        justify-content: center;
-        gap: 10px;
-    }
-
-    .hero h1 {
-        font-size: 28px;
-    }
-
-    .hero-buttons {
-        flex-direction: column;
-    }
-}
+</body>
+</html>
