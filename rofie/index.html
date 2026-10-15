@@ -1,184 +1,1189 @@
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>HPStore - Jual Beli HP</title>
-<style>
-:root {
-  --primary: #2563eb;
-  --primary-dark: #1d4ed8;
-  --accent: #10b981;
-  --accent-hover: #059669;
-  --dark: #0f172a;
-  --gray-dark: #334155;
-  --gray-light: #f8fafc;
-  --border-color: #e2e8f0;
-  --text-main: #1e293b;
-  --text-muted: #64748b;
-  --white: #ffffff;
-}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ROFIE STORE - Toko jual beli HP baru dan bekas dengan harga terbaik.">
+    <title>ROFIE STORE | Jual Beli HP</title>
 
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif}
-body{color:var(--text-main);line-height:1.6;background:var(--gray-light)}
-.container{max-width:1100px;margin:auto;padding:0 20px}
+    <style>
+        /* RESET */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
 
-.navbar{background:var(--white);box-shadow:0 1px 3px rgba(0,0,0,0.1);position:sticky;top:0;z-index:1000}
-.nav-container{display:flex;justify-content:space-between;align-items:center;height:70px}
-.logo{font-size:24px;font-weight:800;color:var(--dark);text-decoration:none}.logo span{color:var(--accent)}
-.nav-links{display:flex;list-style:none}.nav-links li a{text-decoration:none;color:var(--text-muted);margin-left:24px;font-weight:600;transition:color 0.2s}
-.nav-links li a:hover{color:var(--primary)}
+        :root {
+            --primary: #19c37d;
+            --dark: #101713;
+            --light: #f5f7f6;
+            --text: #333;
+        }
 
-.hero{background:linear-gradient(135deg, #0f172a, #1e293b);color:var(--white);padding:90px 0;text-align:center}
-.hero h1{font-size:42px;margin-bottom:18px;letter-spacing:-0.5px}
-.hero p{font-size:18px;max-width:650px;margin:0 auto 28px;color:#94a3b8}
-.hero-buttons{display:flex;justify-content:center;gap:15px;flex-wrap:wrap}
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 90px;
+        }
 
-.btn{display:inline-block;padding:12px 26px;border-radius:8px;text-decoration:none;font-weight:600;transition:all 0.2s ease}
-.btn-primary{background:var(--primary);color:var(--white)}.btn-primary:hover{background:var(--primary-dark)}
-.btn-secondary,.btn-whatsapp{background:var(--accent);color:var(--white)}.btn-secondary:hover,.btn-whatsapp:hover{background:var(--accent-hover)}
+        body {
+            background: var(--light);
+            color: var(--text);
+            line-height: 1.6;
+        }
 
-.section-title{text-align:center;font-size:30px;margin-bottom:40px;color:var(--dark);font-weight:700}
-.services{padding:70px 0;background:var(--white)}
-.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:25px}
-.service-card{text-align:center;padding:30px 20px;border-radius:12px;background:var(--gray-light);border:1px solid var(--border-color);transition:transform 0.2s}
-.service-card:hover{transform:translateY(-3px)}
-.service-card .icon{font-size:38px;margin-bottom:12px}.service-card h3{margin-bottom:8px;color:var(--dark);font-size:18px}
-.service-card p{color:var(--text-muted);font-size:14px}
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
 
-.products{padding:70px 0}
-.product-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:25px}
-.product-card{background:var(--white);border-radius:12px;overflow:hidden;box-shadow:0 4px 6px -1px rgba(0,0,0,0.05), 0 2px 4px -1px rgba(0,0,0,0.03);border:1px solid var(--border-color);position:relative;transition:transform 0.2s}
-.product-card:hover{transform:translateY(-4px);box-shadow:0 10px 15px -3px rgba(0,0,0,0.08)}
-.product-badge{position:absolute;top:15px;left:15px;background:var(--accent);color:var(--white);padding:4px 10px;border-radius:6px;font-size:12px;font-weight:600;z-index:1}
-.product-card img{width:100%;height:240px;object-fit:cover}
-.product-info{padding:20px}
-.product-info h3{font-size:18px;margin-bottom:8px;color:var(--dark)}
-.price{font-size:18px;color:var(--primary);font-weight:700}
-.unit{font-size:13px;color:var(--text-muted);font-weight:normal}
-.desc{font-size:14px;color:var(--text-muted);margin:8px 0 16px}
-.btn-sm{display:block;text-align:center;background:var(--dark);color:var(--white);padding:10px;border-radius:6px;text-decoration:none;font-weight:600;transition:background 0.2s}
-.btn-sm:hover{background:var(--primary)}
+        button, input, select {
+            font: inherit;
+        }
 
-.cta{background:var(--dark);color:var(--white);text-align:center;padding:60px 0}
-.cta h2{font-size:30px;margin-bottom:10px}
-.cta p{color:#94a3b8;margin-bottom:24px}
-.btn-whatsapp{font-size:16px;padding:14px 28px;border-radius:8px}
+        button {
+            cursor: pointer;
+        }
 
-footer{background:#090d16;color:#64748b;text-align:center;padding:24px;font-size:14px}
-footer strong{color:var(--white)}
+        .container {
+            width: min(1150px, 92%);
+            margin: auto;
+        }
 
-@media(max-width:768px){
-  .nav-container{flex-direction:column;height:auto;padding:12px 0;gap:8px}
-  .nav-links li a{margin-left:12px;font-size:13px}
-  .hero h1{font-size:30px}
-  .hero{padding:60px 0}
-  .hero-buttons{flex-direction:column;align-items:center}
-  .btn{width:100%;max-width:260px;text-align:center}
-}
-</style>
+        /* NAVBAR */
+        header {
+            background: rgba(16, 23, 19, .97);
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 3px 15px #0002;
+        }
+
+        .navbar {
+            min-height: 76px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: 900;
+            letter-spacing: 1px;
+            white-space: nowrap;
+        }
+
+        .logo span {
+            color: var(--primary);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            list-style: none;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .cart-button {
+            border: 0;
+            border-radius: 10px;
+            padding: 10px 15px;
+            background: var(--primary);
+            color: #092b1b;
+            font-weight: 800;
+        }
+
+        /* HERO */
+        .hero {
+            background:
+                radial-gradient(ellipse at 80% 20%, #19c37d35, transparent 40%),
+                linear-gradient(125deg, #101713, #172c21);
+            color: white;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            min-height: 470px;
+            display: grid;
+            grid-template-columns: 1.15fr .85fr;
+            align-items: center;
+            gap: 35px;
+            padding-top: 45px;
+            padding-bottom: 45px;
+        }
+
+        .hero-tag {
+            display: inline-block;
+            background: #19c37d20;
+            color: #60f0ad;
+            border: 1px solid #19c37d66;
+            padding: 7px 14px;
+            border-radius: 30px;
+            font-size: 13px;
+            font-weight: 700;
+            margin-bottom: 18px;
+        }
+
+        .hero h1 {
+            font-size: clamp(36px, 5vw, 60px);
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            color: var(--primary);
+        }
+
+        .hero p {
+            color: #cbd5ce;
+            max-width: 500px;
+            margin-bottom: 28px;
+        }
+
+        .btn {
+            display: inline-block;
+            border: 0;
+            border-radius: 9px;
+            padding: 12px 20px;
+            font-weight: 800;
+            transition: .25s;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: #092b1b;
+        }
+
+        .btn-primary:hover {
+            background: #36e39b;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            border: 1px solid #ffffff60;
+            color: white;
+            margin-left: 8px;
+        }
+
+        .btn-outline:hover {
+            background: white;
+            color: var(--dark);
+        }
+
+        .hero-image {
+            width: 100%;
+            max-height: 370px;
+            object-fit: contain;
+            filter: drop-shadow(0 20px 30px #0008);
+        }
+
+        /* KEUNGGULAN */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+            margin-top: -1px;
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+
+        .feature {
+            background: white;
+            border: 1px solid #e8ece9;
+            border-radius: 14px;
+            padding: 20px;
+            display: flex;
+            gap: 13px;
+            align-items: center;
+        }
+
+        .feature-icon {
+            font-size: 28px;
+        }
+
+        .feature h3 {
+            font-size: 15px;
+            color: var(--dark);
+        }
+
+        .feature p {
+            color: #777;
+            font-size: 13px;
+        }
+
+        /* SECTION */
+        .section {
+            padding: 60px 0;
+        }
+
+        .section-heading {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .section-heading .eyebrow {
+            color: #119c62;
+            font-size: 12px;
+            font-weight: 900;
+            letter-spacing: 2px;
+        }
+
+        .section-heading h2 {
+            font-size: clamp(25px, 4vw, 34px);
+            color: var(--dark);
+            margin: 5px 0;
+        }
+
+        .section-heading p {
+            color: #777;
+        }
+
+        /* PENCARIAN DAN FILTER */
+        .toolbar {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 25px;
+            flex-wrap: wrap;
+        }
+
+        .search-box {
+            flex: 1;
+            min-width: 200px;
+            padding: 13px 15px;
+            border: 1px solid #dfe5e1;
+            border-radius: 10px;
+            outline: none;
+            background: white;
+        }
+
+        .search-box:focus {
+            border-color: var(--primary);
+        }
+
+        .filter-select {
+            padding: 12px;
+            border: 1px solid #dfe5e1;
+            border-radius: 10px;
+            background: white;
+            min-width: 160px;
+        }
+
+        /* PRODUK */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 22px;
+        }
+
+        .product-card {
+            background: white;
+            border: 1px solid #e9eeea;
+            border-radius: 15px;
+            overflow: hidden;
+            transition: transform .25s, box-shadow .25s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px #10251a12;
+        }
+
+        .product-image-wrap {
+            height: 210px;
+            background: #f0f4f1;
+            position: relative;
+            display: grid;
+            place-items: center;
+            padding: 15px;
+        }
+
+        .product-image {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            transition: transform .3s;
+        }
+
+        .product-card:hover .product-image {
+            transform: scale(1.05);
+        }
+
+        .product-badge {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            background: var(--primary);
+            color: #07371f;
+            padding: 4px 9px;
+            border-radius: 5px;
+            font-size: 10px;
+            font-weight: 900;
+        }
+
+        .product-info {
+            padding: 17px;
+        }
+
+        .product-category {
+            color: #149a60;
+            font-size: 11px;
+            font-weight: 800;
+            text-transform: uppercase;
+        }
+
+        .product-info h3 {
+            color: var(--dark);
+            font-size: 16px;
+            margin: 5px 0;
+        }
+
+        .product-desc {
+            color: #777;
+            font-size: 12px;
+            min-height: 39px;
+        }
+
+        .product-price {
+            color: #119c62;
+            font-size: 19px;
+            font-weight: 900;
+            margin: 12px 0;
+        }
+
+        .product-actions {
+            display: flex;
+            gap: 8px;
+        }
+
+        .product-actions button {
+            flex: 1;
+            padding: 9px 5px;
+            border-radius: 8px;
+            font-size: 12px;
+            font-weight: 800;
+        }
+
+        .buy-btn {
+            background: var(--primary);
+            color: #092b1b;
+            border: 1px solid var(--primary);
+        }
+
+        .cart-add-btn {
+            background: white;
+            color: #16764c;
+            border: 1px solid #b7ddc8;
+        }
+
+        .product-actions button:hover {
+            opacity: .8;
+        }
+
+        .empty-message {
+            text-align: center;
+            padding: 35px;
+            color: #777;
+            display: none;
+        }
+
+        /* PROMO */
+        .promo {
+            background: linear-gradient(120deg, #123d29, #101713);
+            color: white;
+            padding: 35px;
+            border-radius: 18px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .promo h2 {
+            font-size: 27px;
+            margin-bottom: 8px;
+        }
+
+        .promo p {
+            color: #cbd5ce;
+        }
+
+        /* TENTANG */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 35px;
+            align-items: center;
+        }
+
+        .about-panel {
+            background: #e3f8eb;
+            min-height: 260px;
+            border-radius: 18px;
+            display: grid;
+            place-items: center;
+            font-size: 95px;
+        }
+
+        .about-text h2 {
+            font-size: 30px;
+            color: var(--dark);
+            margin-bottom: 12px;
+        }
+
+        .about-text p {
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .about-list {
+            list-style: none;
+        }
+
+        .about-list li {
+            margin: 8px 0;
+        }
+
+        /* KONTAK */
+        .contact {
+            background: white;
+            border-top: 1px solid #e9eeea;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+            text-align: center;
+        }
+
+        .contact-card {
+            padding: 25px 15px;
+            border: 1px solid #e8ece9;
+            border-radius: 12px;
+        }
+
+        .contact-card .icon {
+            font-size: 30px;
+        }
+
+        .contact-card h3 {
+            color: var(--dark);
+            margin: 8px 0;
+        }
+
+        .contact-card p {
+            color: #777;
+            font-size: 14px;
+            overflow-wrap: anywhere;
+        }
+
+        /* FOOTER */
+        footer {
+            background: var(--dark);
+            color: #cbd5ce;
+            padding: 28px 0;
+            text-align: center;
+            font-size: 13px;
+        }
+
+        footer strong {
+            color: var(--primary);
+        }
+
+        /* KERANJANG */
+        .cart-overlay {
+            position: fixed;
+            inset: 0;
+            background: #0008;
+            z-index: 2000;
+            display: none;
+            justify-content: flex-end;
+        }
+
+        .cart-overlay.open {
+            display: flex;
+        }
+
+        .cart-panel {
+            background: white;
+            width: min(420px, 100%);
+            height: 100%;
+            padding: 23px;
+            display: flex;
+            flex-direction: column;
+            box-shadow: -10px 0 30px #0002;
+        }
+
+        .cart-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 15px;
+        }
+
+        .close-cart {
+            background: none;
+            border: none;
+            font-size: 27px;
+        }
+
+        .cart-items {
+            flex: 1;
+            overflow-y: auto;
+            padding: 15px 0;
+        }
+
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            padding: 13px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .cart-item small {
+            color: #777;
+        }
+
+        .remove-item {
+            color: #c0392b;
+            border: 0;
+            background: none;
+            font-size: 12px;
+        }
+
+        .cart-footer {
+            border-top: 1px solid #eee;
+            padding-top: 15px;
+        }
+
+        .cart-total {
+            display: flex;
+            justify-content: space-between;
+            font-weight: 900;
+            margin-bottom: 15px;
+        }
+
+        .checkout-btn {
+            width: 100%;
+            border: 0;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 950px) {
+            .product-grid {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+            }
+
+            .hero-content {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .nav-links {
+                gap: 14px;
+                font-size: 13px;
+            }
+        }
+
+        @media (max-width: 650px) {
+            .navbar {
+                min-height: 68px;
+                flex-wrap: wrap;
+                padding: 12px 0;
+            }
+
+            .logo {
+                font-size: 22px;
+            }
+
+            .nav-links {
+                order: 3;
+                width: 100%;
+                justify-content: space-between;
+                gap: 8px;
+                font-size: 12px;
+            }
+
+            .cart-button {
+                padding: 8px 10px;
+                font-size: 12px;
+            }
+
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+                padding: 45px 0 25px;
+            }
+
+            .hero p {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .hero-image {
+                max-height: 230px;
+            }
+
+            .features {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+
+            .product-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 12px;
+            }
+
+            .product-image-wrap {
+                height: 155px;
+                padding: 10px;
+            }
+
+            .product-info {
+                padding: 12px;
+            }
+
+            .product-info h3 {
+                font-size: 14px;
+            }
+
+            .product-price {
+                font-size: 16px;
+            }
+
+            .product-desc {
+                font-size: 11px;
+            }
+
+            .product-actions {
+                flex-direction: column;
+            }
+
+            .promo {
+                padding: 25px 20px;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-panel {
+                min-height: 190px;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section {
+                padding: 42px 0;
+            }
+
+            .btn-outline {
+                margin: 10px 0 0;
+            }
+        }
+    </style>
 </head>
+
 <body>
 
-<header class="navbar">
-  <div class="container nav-container">
-    <a href="#beranda" class="logo">HP<span>Store</span></a>
-    <ul class="nav-links">
-      <li><a href="#beranda">Beranda</a></li>
-      <li><a href="#layanan">Layanan</a></li>
-      <li><a href="#produk">Koleksi HP</a></li>
-      <li><a href="#kontak">Kontak</a></li>
-    </ul>
-  </div>
-</header>
+    <!-- NAVBAR -->
+    <header>
+        <div class="container navbar">
+            <a href="#home" class="logo">ROFIE <span>STORE.</span></a>
 
-<section class="hero" id="beranda">
-  <div class="container">
-    <h1>Jual Beli HP<br>Mudah, Aman & Terpercaya</h1>
-    <p>Temukan berbagai smartphone pilihan dengan harga menarik. Hubungi kami langsung untuk pemesanan dan informasi stok.</p>
-    <div class="hero-buttons">
-      <a href="#produk" class="btn btn-primary">Lihat Koleksi HP</a>
-      <a href="https://wa.me/6287737497563?text=Halo%20HPStore%2C%20saya%20ingin%20bertanya%20tentang%20HP" class="btn btn-secondary">Chat WhatsApp</a>
+            <ul class="nav-links">
+                <li><a href="#home">Beranda</a></li>
+                <li><a href="#produk">Koleksi HP</a></li>
+                <li><a href="#tentang">Tentang</a></li>
+                <li><a href="#kontak">Kontak</a></li>
+            </ul>
+
+            <button class="cart-button" onclick="toggleCart(true)">
+                🛒 Keranjang (<span id="cart-count">0</span>)
+            </button>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+        <div class="container hero-content">
+            <div>
+                <span class="hero-tag">📱 TOKO HP PILIHAN ANDA</span>
+                <h1>Upgrade HP,<br><span>Upgrade Gaya!</span></h1>
+                <p>
+                    Selamat datang di ROFIE STORE. Temukan smartphone
+                    impianmu dengan harga bersahabat, pilihan menarik,
+                    dan pelayanan yang ramah.
+                </p>
+                <a href="#produk" class="btn btn-primary">Lihat Koleksi →</a>
+                <a href="#kontak" class="btn btn-outline">Hubungi Kami</a>
+            </div>
+
+            <img
+                class="hero-image"
+                src="https://images.unsplash.com/photo-1598327105666-5b89351aff97?auto=format&fit=crop&w=800&q=85"
+                alt="Smartphone modern"
+            >
+        </div>
+    </section>
+
+    <!-- KEUNGGULAN -->
+    <section class="container features">
+        <div class="feature">
+            <div class="feature-icon">✅</div>
+            <div>
+                <h3>Produk Berkualitas</h3>
+                <p>Pilihan HP sesuai kebutuhanmu.</p>
+            </div>
+        </div>
+
+        <div class="feature">
+            <div class="feature-icon">💰</div>
+            <div>
+                <h3>Harga Bersahabat</h3>
+                <p>Belanja sesuai anggaran.</p>
+            </div>
+        </div>
+
+        <div class="feature">
+            <div class="feature-icon">💬</div>
+            <div>
+                <h3>Layanan Ramah</h3>
+                <p>Konsultasi sebelum membeli.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRODUK -->
+    <section class="section" id="produk">
+        <div class="container">
+            <div class="section-heading">
+                <span class="eyebrow">PILIHAN TERBAIK</span>
+                <h2>Koleksi HP ROFIE STORE</h2>
+                <p>Temukan smartphone favoritmu di sini.</p>
+            </div>
+
+            <div class="toolbar">
+                <input
+                    type="search"
+                    id="search"
+                    class="search-box"
+                    placeholder="🔍 Cari nama HP..."
+                    aria-label="Cari produk"
+                >
+
+                <select id="category" class="filter-select"
+                    aria-label="Filter kategori">
+                    <option value="semua">Semua Kategori</option>
+                    <option value="iPhone">iPhone</option>
+                    <option value="Samsung">Samsung</option>
+                    <option value="Xiaomi">Xiaomi</option>
+                    <option value="OPPO">OPPO</option>
+                </select>
+            </div>
+
+            <div class="product-grid" id="product-grid">
+
+                <!-- PRODUK 1 -->
+                <article class="product-card" data-name="iPhone 13"
+                    data-category="iPhone" data-price="6500000">
+                    <div class="product-image-wrap">
+                        <span class="product-badge">TERLARIS</span>
+                        <img class="product-image"
+                            src="https://images.unsplash.com/photo-1592750475338-74b7b21085ab?auto=format&fit=crop&w=500&q=80"
+                            alt="iPhone 13" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">iPhone</span>
+                        <h3>iPhone 13</h3>
+                        <p class="product-desc">Smartphone elegan untuk foto dan aktivitas sehari-hari.</p>
+                        <div class="product-price">Rp 6.500.000</div>
+                        <div class="product-actions">
+                            <button class="buy-btn" onclick="buyNow(this)">Beli Sekarang</button>
+                            <button class="cart-add-btn" onclick="addToCart(this)">+ Keranjang</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- PRODUK 2 -->
+                <article class="product-card" data-name="Samsung Galaxy S24"
+                    data-category="Samsung" data-price="8500000">
+                    <div class="product-image-wrap">
+                        <span class="product-badge">POPULER</span>
+                        <img class="product-image"
+                            src="https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?auto=format&fit=crop&w=500&q=80"
+                            alt="Samsung Galaxy" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Samsung</span>
+                        <h3>Samsung Galaxy S24</h3>
+                        <p class="product-desc">Desain premium untuk produktivitas dan hiburan.</p>
+                        <div class="product-price">Rp 8.500.000</div>
+                        <div class="product-actions">
+                            <button class="buy-btn" onclick="buyNow(this)">Beli Sekarang</button>
+                            <button class="cart-add-btn" onclick="addToCart(this)">+ Keranjang</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- PRODUK 3 -->
+                <article class="product-card" data-name="Xiaomi Redmi Note 13"
+                    data-category="Xiaomi" data-price="2500000">
+                    <div class="product-image-wrap">
+                        <span class="product-badge">HEMAT</span>
+                        <img class="product-image"
+                            src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=500&q=80"
+                            alt="Xiaomi Redmi Note" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Xiaomi</span>
+                        <h3>Redmi Note 13</h3>
+                        <p class="product-desc">Pilihan menarik untuk penggunaan sehari-hari.</p>
+                        <div class="product-price">Rp 2.500.000</div>
+                        <div class="product-actions">
+                            <button class="buy-btn" onclick="buyNow(this)">Beli Sekarang</button>
+                            <button class="cart-add-btn" onclick="addToCart(this)">+ Keranjang</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- PRODUK 4 -->
+                <article class="product-card" data-name="OPPO Reno 11"
+                    data-category="OPPO" data-price="4000000">
+                    <div class="product-image-wrap">
+                        <span class="product-badge">FAVORIT</span>
+                        <img class="product-image"
+                            src="https://images.unsplash.com/photo-1598327105666-5b89351aff97?auto=format&fit=crop&w=500&q=80"
+                            alt="OPPO Reno" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">OPPO</span>
+                        <h3>OPPO Reno 11</h3>
+                        <p class="product-desc">Smartphone stylish untuk menunjang gayamu.</p>
+                        <div class="product-price">Rp 4.000.000</div>
+                        <div class="product-actions">
+                            <button class="buy-btn" onclick="buyNow(this)">Beli Sekarang</button>
+                            <button class="cart-add-btn" onclick="addToCart(this)">+ Keranjang</button>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+
+            <div class="empty-message" id="empty-message">
+                Produk tidak ditemukan. Coba kata kunci lain.
+            </div>
+        </div>
+    </section>
+
+    <!-- PROMO -->
+    <section class="container" style="padding-bottom: 35px;">
+        <div class="promo">
+            <div>
+                <h2>Siap Punya HP Impian?</h2>
+                <p>Tanyakan stok dan penawaran terbaru kepada ROFIE STORE.</p>
+            </div>
+            <a href="#kontak" class="btn btn-primary">Hubungi Sekarang →</a>
+        </div>
+    </section>
+
+    <!-- TENTANG -->
+    <section class="section" id="tentang">
+        <div class="container about-grid">
+            <div class="about-panel">📱</div>
+
+            <div class="about-text">
+                <span class="eyebrow" style="color:#119c62;font-weight:900;">
+                    TENTANG TOKO KAMI
+                </span>
+                <h2>Kenalan dengan ROFIE STORE</h2>
+                <p>
+                    ROFIE STORE adalah konsep toko jual beli smartphone
+                    yang memudahkan pelanggan menemukan HP sesuai
+                    kebutuhan dan anggaran.
+                </p>
+                <ul class="about-list">
+                    <li>✔ Pilihan HP dari berbagai merek</li>
+                    <li>✔ Informasi produk dan harga yang jelas</li>
+                    <li>✔ Pemesanan langsung melalui WhatsApp</li>
+                    <li>✔ Melayani pertanyaan seputar produk</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- KONTAK -->
+    <section class="section contact" id="kontak">
+        <div class="container">
+            <div class="section-heading">
+                <span class="eyebrow">KAMI SIAP MEMBANTU</span>
+                <h2>Hubungi ROFIE STORE</h2>
+                <p>Silakan hubungi kami untuk informasi dan pemesanan.</p>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="icon">💬</div>
+                    <h3>WhatsApp</h3>
+                    <p>Chat untuk tanya stok dan harga.</p>
+                </div>
+
+                <div class="contact-card">
+                    <div class="icon">📍</div>
+                    <h3>Lokasi Toko</h3>
+                    <p>Tambahkan alamat toko Anda di sini.</p>
+                </div>
+
+                <div class="contact-card">
+                    <div class="icon">🕒</div>
+                    <h3>Jam Operasional</h3>
+                    <p>Tambahkan jam buka toko Anda di sini.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <p>© <span id="year"></span> <strong>ROFIE STORE</strong>.
+                Semua Hak Dilindungi.</p>
+            <p>Temukan HP pilihanmu bersama kami 📱</p>
+        </div>
+    </footer>
+
+    <!-- PANEL KERANJANG -->
+    <div class="cart-overlay" id="cart-overlay"
+        onclick="overlayClick(event)">
+        <aside class="cart-panel" aria-label="Keranjang belanja">
+            <div class="cart-header">
+                <h2>🛒 Keranjang Belanja</h2>
+                <button class="close-cart" onclick="toggleCart(false)"
+                    aria-label="Tutup keranjang">×</button>
+            </div>
+
+            <div class="cart-items" id="cart-items">
+                <p>Keranjang masih kosong.</p>
+            </div>
+
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <span>Total</span>
+                    <span id="cart-total">Rp 0</span>
+                </div>
+                <button class="btn btn-primary checkout-btn"
+                    onclick="checkout()">Pesan via WhatsApp</button>
+            </div>
+        </aside>
     </div>
-  </div>
-</section>
 
-<section class="services" id="layanan">
-  <div class="container">
-    <h2 class="section-title">Layanan Kami</h2>
-    <div class="services-grid">
-      <div class="service-card"><div class="icon">📱</div><h3>HP Berkualitas</h3><p>Produk pilihan dengan informasi spesifikasi yang jelas.</p></div>
-      <div class="service-card"><div class="icon">💰</div><h3>Harga Menarik</h3><p>Dapatkan penawaran terbaik untuk berbagai pilihan HP.</p></div>
-      <div class="service-card"><div class="icon">🚚</div><h3>Pengiriman</h3><p>Pesanan diproses dan dikirim sesuai kesepakatan.</p></div>
-      <div class="service-card"><div class="icon">💬</div><h3>Customer Support</h3><p>Konsultasikan kebutuhan HP Anda melalui WhatsApp.</p></div>
-    </div>
-  </div>
-</section>
+    <script>
+        // GANTI DENGAN NOMOR WHATSAPP TOKO ANDA.
+        // Gunakan kode negara 62, tanpa tanda + atau angka 0 di depan.
+        // Contoh: 6281234567890
+        const NOMOR_WA = "6281234567890";
 
-<section class="products" id="produk">
-  <div class="container">
-    <h2 class="section-title">Koleksi HP</h2>
-    <div class="product-grid">
+        const cart = [];
 
-      <div class="product-card">
-        <span class="product-badge">Terlaris</span>
-        <img src="https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?auto=format&fit=crop&w=800&q=80" alt="Smartphone Pro">
-        <div class="product-info">
-          <h3>Smartphone Pro Max</h3>
-          <p class="price">Rp 8.999.000 <span class="unit">/ unit</span></p>
-          <p class="desc">Layar premium, kamera berkualitas, dan performa cepat.</p>
-          <a class="btn-sm" href="https://wa.me/6281234567890?text=Saya%20ingin%20membeli%20Smartphone%20Pro%20Max">Beli Sekarang</a>
-        </div>
-      </div>
+        const rupiah = angka => new Intl.NumberFormat("id-ID", {
+            style: "currency",
+            currency: "IDR",
+            maximumFractionDigits: 0
+        }).format(angka);
 
-      <div class="product-card">
-        <span class="product-badge">Best Seller</span>
-        <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=800&q=80" alt="Smartphone">
-        <div class="product-info">
-          <h3>Smartphone Ultra</h3>
-          <p class="price">Rp 6.499.000 <span class="unit">/ unit</span></p>
-          <p class="desc">Desain modern dengan kamera dan performa untuk aktivitas harian.</p>
-          <a class="btn-sm" href="https://wa.me/6281234567890?text=Saya%20ingin%20membeli%20Smartphone%20Ultra">Beli Sekarang</a>
-        </div>
-      </div>
+        document.getElementById("year").textContent =
+            new Date().getFullYear();
 
-      <div class="product-card">
-        <span class="product-badge">Promo</span>
-        <img src="https://images.unsplash.com/photo-1598327105666-5b89351aff97?auto=format&fit=crop&w=800&q=80" alt="Smartphone">
-        <div class="product-info">
-          <h3>Smartphone Series A</h3>
-          <p class="price">Rp 3.499.000 <span class="unit">/ unit</span></p>
-          <p class="desc">Pilihan ekonomis dengan fitur lengkap untuk kebutuhan sehari-hari.</p>
-          <a class="btn-sm" href="https://wa.me/6287737497563?text=Saya%20ingin%20membeli%20Smartphone%20Series%20A">Beli Sekarang</a>
-        </div>
-      </div>
+        // PENCARIAN DAN FILTER PRODUK
+        function filterProducts() {
+            const keyword = document.getElementById("search")
+                .value.toLowerCase().trim();
 
-      <div class="product-card">
-        <span class="product-badge">Baru</span>
-        <img src="https://images.unsplash.com/photo-1580910051074-3eb694886505?auto=format&fit=crop&w=800&q=80" alt="Smartphone">
-        <div class="product-info">
-          <h3>Smartphone Note</h3>
-          <p class="price">Rp 4.999.000 <span class="unit">/ unit</span></p>
-          <p class="desc">Layar luas, baterai tahan lama, dan nyaman untuk bekerja maupun hiburan.</p>
-          <a class="btn-sm" href="https://wa.me/6287737497563?text=Saya%20ingin%20membeli%20Smartphone%20Note">Beli Sekarang</a>
-        </div>
-      </div>
+            const category = document.getElementById("category").value;
+            const cards = document.querySelectorAll(".product-card");
+            let visible = 0;
 
-    </div>
-  </div>
-</section>
+            cards.forEach(card => {
+                const name = card.dataset.name.toLowerCase();
+                const brand = card.dataset.category;
+                const matchName = name.includes(keyword);
+                const matchCategory =
+                    category === "semua" || brand === category;
 
-<section class="cta" id="kontak">
-  <div class="container">
-    <h2>Ingin Membeli HP?</h2>
-    <p>Hubungi kami untuk cek stok, harga, dan proses pemesanan.</p>
-    <a href="https://wa.me/6287737497563?text=Halo%20HPStore%2C%20saya%20ingin%20cek%20stok%20HP" class="btn btn-whatsapp">💬 Chat Sekarang via WhatsApp</a>
-  </div>
-</section>
+                const show = matchName && matchCategory;
+                card.style.display = show ? "" : "none";
 
-<footer>
-  © 2026 <strong>HPStore</strong>. Semua Hak Dilindungi.
-</footer>
+                if (show) visible++;
+            });
+
+            document.getElementById("empty-message").style.display =
+                visible ? "none" : "block";
+        }
+
+        document.getElementById("search")
+            .addEventListener("input", filterProducts);
+
+        document.getElementById("category")
+            .addEventListener("change", filterProducts);
+
+        // AMBIL DATA PRODUK DARI KARTU
+        function getProduct(button) {
+            const card = button.closest(".product-card");
+
+            return {
+                name: card.dataset.name,
+                category: card.dataset.category,
+                price: Number(card.dataset.price)
+            };
+        }
+
+        // TAMBAH KE KERANJANG
+        function addToCart(button) {
+            const product = getProduct(button);
+            const existing = cart.find(item =>
+                item.name === product.name
+            );
+
+            if (existing) {
+                existing.qty++;
+            } else {
+                cart.push({ ...product, qty: 1 });
+            }
+
+            renderCart();
+            alert(product.name + " berhasil ditambahkan ke keranjang!");
+        }
+
+        // TAMPILKAN ISI KERANJANG
+        function renderCart() {
+            const itemsContainer = document.getElementById("cart-items");
+            const count = cart.reduce((sum, item) => sum + item.qty, 0);
+            const total = cart.reduce(
+                (sum, item) => sum + item.price * item.qty, 0
+            );
+
+            document.getElementById("cart-count").textContent = count;
+            document.getElementById("cart-total").textContent =
+                rupiah(total);
+
+            if (cart.length === 0) {
+                itemsContainer.innerHTML =
+                    "<p>Keranjang masih kosong.</p>";
+                return;
+            }
+
+            itemsContainer.innerHTML = cart.map((item, index) => `
+                <div class="cart-item">
+                    <div>
+                        <strong>${item.name}</strong><br>
+                        <small>${rupiah(item.price)} × ${item.qty}</small><br>
+                        <strong>${rupiah(item.price * item.qty)}</strong>
+                    </div>
+                    <div>
+                        <button class="remove-item"
+                            onclick="changeQty(${index}, -1)">−</button>
+                        <span>${item.qty}</span>
+                        <button class="remove-item"
+                            onclick="changeQty(${index}, 1)">+</button>
+                    </div>
+                </div>
+            `).join("");
+        }
+
+        // UBAH JUMLAH PRODUK
+        function changeQty(index, amount) {
+            if (!cart[index]) return;
+
+            cart[index].qty += amount;
+
+            if (cart[index].qty <= 0) {
+                cart.splice(index, 1);
+            }
+
+            renderCart();
+        }
+
+        // BUKA / TUTUP KERANJANG
+        function toggleCart(open) {
+            document.getElementById("cart-overlay")
+                .classList.toggle("open", open);
+        }
+
+        function overlayClick(event) {
+            if (event.target.id === "cart-overlay") {
+                toggleCart(false);
+            }
+        }
+
+        // VALIDASI NOMOR WHATSAPP
+        function openWhatsApp(message) {
+            if (!/^62\d{8,15}$/.test(NOMOR_WA)) {
+                alert("Nomor WhatsApp toko belum benar. Silakan ubah NOMOR_WA di kode.");
+                return;
+            }
+
+            const url = "https://wa.me/" + NOMOR_WA +
+                "?text=" + encodeURIComponent(message);
+
+            window.open(url, "_blank", "noopener,noreferrer");
+        }
+
+        // BELI SATU PRODUK
+        function buyNow(button) {
+            const product = getProduct(button);
+
+            const message =
+                "Halo ROFIE STORE, saya ingin membeli:\n" +
+                "Produk: " + product.name + "\n" +
+                "Harga: " + rupiah(product.price) + "\n\n" +
+                "Apakah produk ini masih tersedia?";
+
+            openWhatsApp(message);
+        }
+
+        // CHECKOUT SEMUA PRODUK
+        function checkout() {
+            if (cart.length === 0) {
+                alert("Keranjang Anda masih kosong!");
+                return;
+            }
+
+            let message = "Halo ROFIE STORE, saya ingin memesan:\n\n";
+
+            cart.forEach((item, index) => {
+                message +=
+                    (index + 1) + ". " + item.name +
+                    "\n   Jumlah: " + item.qty +
+                    "\n   Harga: " + rupiah(item.price * item.qty) +
+                    "\n\n";
+            });
+
+            const total = cart.reduce(
+                (sum, item) => sum + item.price * item.qty, 0
+            );
+
+            message += "Total pesanan: " + rupiah(total) +
+                "\n\nMohon konfirmasi ketersediaan produk. Terima kasih.";
+
+            openWhatsApp(message);
+        }
+
+        renderCart();
+    </script>
 
 </body>
 </html>
+
